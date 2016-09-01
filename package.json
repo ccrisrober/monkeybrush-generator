@@ -18,6 +18,7 @@
   "homepage": "https://github.com/maldicion069/monkeybrush-generator#readme",
   "dependencies": {
     "dotty": "0.0.2",
-    "readdirp": "^2.1.0"
+    "readdirp": "^2.1.0",
+    "inquirer": "~1.1.2"
   }
 }
