@@ -10,15 +10,28 @@
     "type": "git",
     "url": "git+https://github.com/maldicion069/monkeybrush-generator.git"
   },
+  "bin": {
+    "monkeybrush": "index.js"
+  },
   "author": "",
-  "license": "ISC",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/maldicion069/monkeybrush-generator/issues"
   },
+  "keywords": [
+    "node",
+    "cli",
+    "monkeybrush",
+    "monkeybrush.js",
+    "generator",
+    "webgl",
+    "webgl2"
+  ],
   "homepage": "https://github.com/maldicion069/monkeybrush-generator#readme",
   "dependencies": {
     "dotty": "0.0.2",
-    "readdirp": "^2.1.0",
-    "inquirer": "~1.1.2"
+    "figlet": "^1.1.2",
+    "inquirer": "~1.1.2",
+    "readdirp": "^2.1.0"
   }
 }

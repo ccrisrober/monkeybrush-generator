@@ -23,6 +23,12 @@ function render(template, params) {
 	});
 };
 
+console.log(require("figlet").textSync('MonkeyBrush', {
+    font: 'Ghost',
+    horizontalLayout: 'default',
+    verticalLayout: 'default'
+}));
+
 inquirer.prompt([{
 	type: "input",
 	name: "name",
@@ -31,7 +37,7 @@ inquirer.prompt([{
 }, {
 	type: "input",
 	name: "description",
-	message: "Project description",
+	message: "Project description (minLenght: 3)",
 	validate: function (str) {
 		return str.length >= 3;
 	}
@@ -65,5 +71,19 @@ inquirer.prompt([{
 
 			fs.writeFile(str, content)
 		});
+	});
+
+    var exec = require('child_process').exec;
+
+	var child = exec("npm install", function (err, stdout, stderr) {
+		if (stderr !== null) {
+	      console.log('' + stderr);
+	    }
+	    if (stdout !== null) {
+	      console.log('' + stdout);
+	    }
+	    if (err !== null) {
+	      console.log('' + err);
+	    }
 	});
 });
